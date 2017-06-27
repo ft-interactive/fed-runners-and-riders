@@ -1,0 +1,68 @@
+<!-- {% from "myft-follow/button.html" import FollowButton -%} -->
+
+{% macro Card(i, index) %}
+  {% if i.company %}
+  {% set topicurl = "https://www.ft.com/stream/organisationsId/{{ i.topicid }}" %}
+  {% if i.topicidtaxonomy === 'people' %}
+    {% set topicurl = "https://www.ft.com/stream/peopleId/{{ i.topicid }}" %}
+  {% endif %}
+  <div class="card-position o-expander" data-concept-id="{{ i.topicid }}" data-o-component="o-card o-expander" {% if index != '11' %}data-o-expander-shrink-to="1" data-o-expander-count-selector=".card-position__section" data-o-expander-expanded-toggle-text="Read less" data-o-expander-collapsed-toggle-text="Read more" {% endif %}>
+    <h2 class="card-position__name" id="card-position__name_company"><!-- {% if i.topicid %}<a href="https://www.ft.com/stream/organisationsId/{{ i.topicid }}">{{ i.company }}</a>  {{ FollowButton(i.topicid, i.company, i.topicidtaxonomy)}}{% else %}{{ i.company }}{% endif %} --></h2>
+    <h2 class="card-position__name" id="card-position__name_nameTitle">{% if i.nametitle %}{{ i.nametitle }}{% endif %}</h2>
+    {% if i.picurl %}
+    <figure class="card-position__image">
+      <img alt="" src="https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fcom.ft.imagepublish.prod.s3.amazonaws.com%2F{{ i.picurl }}?source=ig&fit=scale-down&width=700"></img>
+        {% if i.picsource %}
+        <figcaption class="o-typography-caption">
+          &#xA9;{{ i.picsource }}
+        </figcaption>
+        {% endif %}
+    </figure>
+    {% else %}
+    <br />
+    {% endif %}
+    <div class="o-expander__content">
+      <div class="card-position__body">
+        {% if i.statement %}
+        <div class="card-position__section">
+         <!--  <h3>What {{ i.pronoun }} said</h3> -->
+          {{ i.statement | safe }}
+        </div>
+        {% endif %}
+
+<!--         {% if i.context %}
+        <div class="card-position__section">
+          <h3>Why {{ i.pronoun }} said it</h3>
+          {{ i.context | safe }}
+        </div>
+        {% endif %} -->
+
+<!--         {% if i.byline %}
+        <div class="card-position__section card-position__section_byline">
+          <i>— {{ i.byline | md(true) }}</i>
+        </div>
+        {% endif %} -->
+
+        {% if i.links.length > 0 %}
+        <div class="card-position__section">
+          <div class="card-position__onward-headline">
+            More on {{i.company}}:
+          </div>
+          <ul class="card-position__onward-links">
+            {% for link in i.links %}
+            <li>
+              <a class="card-position__onward-link" href="{{ link.linkURL }}">{{ link.linkHeadline }}</a> <time data-o-component="o-date" class="o-date o-card__timestamp article__timestamp" datetime="{{ link.linkPubDate | isotime }}">{{ link.linkPubDate | ftdate }}</time>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+
+        <div style="width: 100%; text-align: center;">
+          <button class="o-expander__toggle o--if-js card-position__readmore" data-concept-id="{{ i.topicid }}" data-trackable="card-toggle">Read more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+{% endmacro %}
