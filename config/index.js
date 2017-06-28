@@ -9,8 +9,6 @@ export default async () => {
   const flags = await getFlags();
   const onwardJourney = await getOnwardJourney();
   let cards = {};
-  let data;
-
 
   const text = await bertha.get('1ygZbMiRKX5F6b245O5FmgpLUiKV3Znk9iMk9tJ1ZXRw', ['text']).then((text) => {
   return text.text;
@@ -39,16 +37,18 @@ export default async () => {
   cards = industries.map((industry) => {
     const industryName = industry.industryname;
     const industryDisplayName = industry.industrydisplayname;
+    const explanatoryText = industry.explanatorytext;
 
     return {
       industryName,
       industryDisplayName,
+      explanatoryText,
       items: cardsByIndustry[industryName],
     }
   })
 
  // console.log(cardsByIndustry)
-  // console.log(cards)
+  console.log(cards)
   // console.log(pageText);
 
   return {

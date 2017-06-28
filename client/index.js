@@ -1,19 +1,24 @@
-/*
-  TODO: delete this comment
+import scrollTo from './components/core/scrollTo';
 
-  This file is where you bootstrap your JS code
-  For example import stuff here:
+const topDivs = document.querySelectorAll('.demo-cell');
 
-  import {select} from 'd3-selection';
-  import myComponent from './components/my-component';
+// Array.from(topDivs).forEach(topDiv => topDiv.classList.remove('selected'));
 
-  Split logical parts of you project into components e.g.
+Array.from(topDivs).forEach((topDiv) => {
+  topDiv.addEventListener('click', () => {
+    //FIGURE OUT TOPDIV.DATASET.CARDID
+    const id = topDiv.id;
+    console.log(topDiv, topDiv.id)
+    const topDivYPos = document.querySelector('#card-div-container').offsetTop;
+    console.log(topDivYPos)
+    const viewportHeight = document.documentElement.clientHeight;
+    // yPos is position of card within timeline-card-container + position of the timeline-card-container. then subtract half height of screen to capture waypoint (and a tiny bit more to capture waypoint)
+    //IGURE OUT THE SELECTOR
+    const yPos = document.querySelector(`#card-${id}`).offsetTop + (((viewportHeight/2) + topDivYPos));
+    scrollTo(yPos, 500);
 
-  /client
-    - /components
-        - /component-name
-            - styles.scss
-            - index.js
-            - template.html
-
-*/
+    //  WILL NEED TO FIGURE OUT PART BELOW FOR TEXT
+    // const textDate = topDiv.querySelector('.timeline__circle__text-date').innerText;
+    // gaSendEvent('timeline', 'click', textDate);
+  });
+});

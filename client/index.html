@@ -5,16 +5,69 @@
 
 <p>{{ intro | md }}</p>
 
-{# repeating card section starts #}
-{% for card in cards %}
-  {% set loopcounter = loop %}
-  <h1 class="card-position__position">{{ card.industryDisplayName }}</h1>
-  {% for item in card.items %}
-  {% set index = loopcounter.index + '' + loop.index %}
-  {{ Card(item, index) }}
-  {% endfor %}
-{% endfor %}
-{# repeating card section ends #}
+<div id="fed-heds" class="o-grid-container">
+	<div class="o-grid-row fed-heds-row">
+		<div data-o-grid-colspan="4 S12 M4">
+			<div class="demo-cell" id="chair">
+				<h2 class="top-div-position">Chair</h2>
+				<h2 class="top-div-name">Janet Yellen</h2>
+			</div>
+		</div>
+		<div data-o-grid-colspan="4 S6 M4">
+			<div class="demo-cell" id="vice-chair">
+				<h2 class="top-div-position">Vice Chair</h2>
+				<h2 class="top-div-name">Stanley Fischer</h2>
+			</div>
+		</div>
+		<div data-o-grid-colspan="4 S6 M4">
+			<div class="demo-cell" id="governor1">
+				<h2 class="top-div-position">Governor</h2>
+				<h2 class="top-div-name">Jerome Powell</h2>
+			</div>
+		</div>
+	</div>
+	<div class="o-grid-row fed-heds-row">
+		<div data-o-grid-colspan="3 S6 M3">
+			<div class="demo-cell" id="governor2">
+				<h2 class="top-div-position">Governor</h2>
+				<h2 class="top-div-name">Lael Brainard</h2>
+			</div>
+		</div>
+		<div data-o-grid-colspan="3 S6 M3">
+			<div class="demo-cell" id="governor3">
+				<h2 class="top-div-position">Governor</h2>
+				<h2 class="top-div-name">VACANT</h2>
+			</div>
+		</div>
+		<div data-o-grid-colspan="3 S6 M3">
+			<div class="demo-cell" id="governor4">
+				<h2 class="top-div-position">Governor</h2>
+				<h2 class="top-div-name">VACANT</h2>
+			</div>
+		</div>
+		<div data-o-grid-colspan="3 S6 M3">
+			<div class="demo-cell" id="governor5">
+				<h2 class="top-div-position">Governor</h2>
+				<h2 class="top-div-name">VACANT</h2>
+			</div>
+		</div>
+	</div>
+</div>
 
-{% endblock %}
+<div class="o-grid-container" id="card-div-container">
 
+	{# repeating card section starts #}
+	{% for card in cards %}
+	  {% set loopcounter = loop %}
+	  <h1 class="card-position__position" id="card-{{ card.industryName }}">{{ card.industryDisplayName }}</h1>
+	  <p class="explanatory-text">{{ card.explanatoryText }}</p>
+	  {% for item in card.items %}
+	  {% set index = loopcounter.index + '' + loop.index %}
+	  {{ Card(item, index) }}
+	  {% endfor %}
+	{% endfor %}
+	{# repeating card section ends #}
+
+	{% endblock %}
+
+</div>
