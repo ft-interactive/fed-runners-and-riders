@@ -12,7 +12,7 @@
 </p>
 <meta itemprop="dateModified" content="{{ publishedDate | isotime }}">
 
-{% if mainImage.url or mainImage.uuid %}
+<!-- {% if mainImage.url or mainImage.uuid %}
 <figure class="graphic graphic-b-1 graphic-pad-1">
   <img alt="" src="{{ mainImage | getMainImage }}"></img>
     <figcaption class="o-typography-caption">
@@ -20,7 +20,7 @@
      {{mainImage.credit}}
   </figcaption>
 </figure>
-{% endif %}
+{% endif %} -->
 
 {% if flags.shareButtons %}
   {% include "includes/share.html" %}

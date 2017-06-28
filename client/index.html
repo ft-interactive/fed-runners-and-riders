@@ -65,6 +65,9 @@
 	  {% set index = loopcounter.index + '' + loop.index %}
 	  {{ Card(item, index) }}
 	  {% endfor %}
+	   <div style="width: 100%; text-align: center;">
+          <button class="o-expander__toggle o--if-js buttons-dood">Return to top</button>
+       </div>
 	{% endfor %}
 	{# repeating card section ends #}
 
