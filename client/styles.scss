@@ -1,7 +1,5 @@
 @import 'o-colors/main';
 @import 'o-grid/main';
-@import 'o-buttons/main';
-@import 'o-card/main';
 @import 'components/core/main';
 @import 'card/card';
 
@@ -9,6 +7,3 @@
 @function getColor($args...) {
   @return oColorsGetPaletteColor($args...);
 }
-
-
-
