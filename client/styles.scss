@@ -21,11 +21,11 @@
   overflow: auto; // clear floats
   margin: 1em auto;
   background: #FDF8F2;
-  padding: 1em 30px;
+  padding: 1em 10px;
   box-shadow: 0 1px 2px 1px rgba(0,0,0,.15);
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
-  height: 80%;
+  height: 90%;
   cursor: pointer;
 	// box-sizing: border-box;
 	// zoom: 1;
@@ -68,4 +68,18 @@
     font-size: 1.1em !important;
     letter-spacing: .01em;
     }
+}
+.fed-image-img {
+  height: 80px;
+  width: 80px;
+}
+#vacancy-legend {
+  height: 20px;
+  background-color: #26747a;
+  margin-top: 8px;
+}
+#filled-legend {
+  height: 20px;
+  background-color: #999999;
+  margin-top: 8px;
 }
