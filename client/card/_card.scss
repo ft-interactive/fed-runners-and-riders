@@ -13,10 +13,10 @@ $o-card-spacing-unit: 10px;
 
 .o-typography-body-wrapper p {
   font-family: Georgia, serif;
-  font-size: 16px;
-  color: #505050 ;
+  font-size: 18px;
+  color: #33302e ;
   letter-spacing: 0.02px;
-  line-height: 22px;
+  line-height: 28px;
 }
 
 .o-typography-body-wrapper .o-expander__toggle.o--if-js {
@@ -110,9 +110,16 @@ $o-card-spacing-unit: 10px;
       font-size: 1.2em;
     }
 
+    // & p{
+    //   font-size: 1em;
+    //   line-height:1.4em;
+    // }
     & p{
-      font-size: 1em;
-      line-height:1.4em;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    color: #33302e;
+    letter-spacing: 0.02px;
+    line-height: 28px;
     }
 
     &_byline {
