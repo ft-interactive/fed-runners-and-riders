@@ -47,15 +47,15 @@
     font-family: 'Georgia', serif !important;
     font-weight: 400 !important;
     color:rgb(0, 0, 0)!important;
-    font-size: .8em !important;
+    font-size: .9em !important;
     line-height: 1.1em !important;
     letter-spacing: 0;
     margin-top: .1em !important;
     margin-bottom: .1em !important;
 
     @include oGridRespondTo(S) {
-    font-size: 1.1em !important;
-    letter-spacing: .01em;
+      font-size: 1.1em !important;
+      letter-spacing: .01em;
     }
 }
 .fed-image-filled {
@@ -67,7 +67,7 @@
     vertical-align: middle;
     height: 80px;
     @include oGridRespondTo($until: S) {
-      height: 50px;
+      height: 60px;
     }
   }
 }
@@ -80,7 +80,7 @@
     vertical-align: middle;
     height: 80px;
     @include oGridRespondTo($until: S) {
-      height: 50px;
+      height: 60px;
     }
   }
 }
