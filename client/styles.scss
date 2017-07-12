@@ -38,6 +38,9 @@
     letter-spacing: 0.06em!important;
     margin: .1em !important;
     line-height: 1em !important;
+      @include oGridRespondTo($until: S) {
+      font-size: .8em !important;
+    }
 }
 .top-div-position {
 
@@ -63,6 +66,9 @@
     border-radius: 50%;
     vertical-align: middle;
     height: 80px;
+    @include oGridRespondTo($until: S) {
+      height: 50px;
+    }
   }
 }
 .fed-image-vacant {
@@ -73,6 +79,9 @@
     border-radius: 50%;
     vertical-align: middle;
     height: 80px;
+    @include oGridRespondTo($until: S) {
+      height: 50px;
+    }
   }
 }
 #vacancy-legend {
@@ -96,6 +105,10 @@ div.legend-text {
 p.top-card-text {
   font-size: 1em !important;
   line-height:1.4em !important;
+  @include oGridRespondTo($until: S) {
+      font-size: .9em !important; 
+      line-height: 1.3em !important; 
+  }
 }
 p.standfirst-paragraph {
   color: #33302e;
