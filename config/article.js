@@ -14,8 +14,7 @@ export default () => ({ // eslint-disable-line
   headline: 'Fed runners and riders',
 
   // summary === standfirst (Summary is what the content API calls it)
-  summary: 'test test test' +
-           'and murder respectable, and to give an appearance of solidity to pure wind',
+  summary: 'test test test',
 
   topic: {
     name: 'Federal Reserve System',

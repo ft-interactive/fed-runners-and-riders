@@ -27,7 +27,7 @@ export default async () => {
 
   const intro = pageText.lede;
   const headline = pageText.head;
-  const summary = pageText.summary;
+  const summary = pageText.standfirst;
   const title = headline;
   const description = summary;
 
