@@ -14,7 +14,7 @@ export default () => ({ // eslint-disable-line
   headline: 'Fed runners and riders',
 
   // summary === standfirst (Summary is what the content API calls it)
-  summary: 'Political language is designed to make lies sound truthful' +
+  summary: 'test test test' +
            'and murder respectable, and to give an appearance of solidity to pure wind',
 
   topic: {
@@ -22,10 +22,10 @@ export default () => ({ // eslint-disable-line
     url: 'https://www.ft.com/topics/organisations/Federal_Reserve',
   },
 
-  relatedArticle: {
-    text: 'Related article »',
-    url: 'https://en.wikipedia.org/wiki/Politics_and_the_English_Language',
-  },
+  // relatedArticle: {
+  //   text: 'Related article »',
+  //   url: 'https://en.wikipedia.org/wiki/Politics_and_the_English_Language',
+  // },
 
   mainImage: {
     title: '',
