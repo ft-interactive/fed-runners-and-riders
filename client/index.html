@@ -73,7 +73,7 @@
 	{% for card in cards %}
 	  {% set loopcounter = loop %}
 	  <h1 class="card-position__position" id="card-{{ card.industryName }}">{{ card.industryDisplayName }}</h1>
-	  <p class="explanatory-text">{{ card.explanatoryText }}</p>
+	  <p class="explanatory-text">{{ card.explanatoryText | md }}</p>
 	  {% for item in card.items %}
 	  {% set index = loopcounter.index + '' + loop.index %}
 	  {{ Card(item, index) }}
