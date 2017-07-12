@@ -97,8 +97,7 @@ export default () => ({ // eslint-disable-line
   },
 
   tracking: {
-
-    /*
+   /*
 
     Microsite Name
 
