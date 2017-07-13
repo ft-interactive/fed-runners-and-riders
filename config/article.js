@@ -21,10 +21,6 @@ export default () => ({ // eslint-disable-line
     url: 'https://www.ft.com/topics/organisations/Federal_Reserve',
   },
 
-  // relatedArticle: {
-  //   text: 'Related article »',
-  //   url: 'https://en.wikipedia.org/wiki/Politics_and_the_English_Language',
-  // },
 
   mainImage: {
     title: '',
