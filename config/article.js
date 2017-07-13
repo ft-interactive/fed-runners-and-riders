@@ -27,7 +27,7 @@ export default () => ({ // eslint-disable-line
     description: '',
     credit: 'Reuters',
 
-    // You can provide a UUID to an image and it was populate everything else
+    // You can provide a UUID to an image and it will populate everything else
     uuid: 'ec5b6dda-6481-11e7-9a66-93fb352ba1fe',
 
     // You can also provide a URL
