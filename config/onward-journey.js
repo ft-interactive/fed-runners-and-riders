@@ -1,5 +1,5 @@
 export default () => ({
   relatedContent: [
- 	{ rows: 2, list: 'thing/TnN0ZWluX09OX0FGVE1fT05fMzMxNTky-T04=' },
+ 	{ rows: 2, list: 'thing/5090aa57-9599-3651-9438-058800ac437b' },
   ],
 });
