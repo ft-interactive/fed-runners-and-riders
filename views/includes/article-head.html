@@ -28,6 +28,7 @@
 
 <p>
   {%- if publishedDate -%}
+  <span class="o-date o-typography-timestamp"> UPDATED </span>
   <time data-o-component="o-date" class="o-date o-typography-timestamp" datetime="{{ publishedDate | isotime }}">{{ publishedDate | ftdate }}</time>
   {%- endif -%}
   {%- if byline -%}
