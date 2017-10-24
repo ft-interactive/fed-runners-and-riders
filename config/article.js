@@ -9,7 +9,7 @@ export default () => ({ // eslint-disable-line
 
   // To set an exact publish date do this:
   //       new Date('2016-05-17T17:11:22Z')
-  publishedDate: new Date('2017-09-06T05:00:00Z'),
+  publishedDate: new Date('2017-10-24T05:00:00Z'),
 
   headline: 'Who will chair the Federal Reserve after Yellen?',
 
